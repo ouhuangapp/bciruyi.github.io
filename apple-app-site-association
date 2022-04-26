@@ -1,0 +1,16 @@
+{
+	"applinks": {
+		"apps": [],
+		"details": {
+			"H6XB8W7KY3.com.app.icloud.demo": {
+				"paths": ["*"]
+			}
+		}
+	},
+	"webcredentials": {
+		"apps": ["H6XB8W7KY3.com.app.icloud.demo"]
+	},
+	"activitycontinuation": {
+		"apps": ["H6XB8W7KY3.com.app.icloud.demo"]
+	}
+}
