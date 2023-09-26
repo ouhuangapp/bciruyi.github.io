@@ -1,20 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>bciruyi_app</title>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi = medium-dpi">
+    <title>Document</title>
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        html {
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+        body {
+            width: 100%; 
+            min-height: 100%;
+            /* height: 100%; */
+            display: flex;
+            background-color: #ccc;
+            flex-direction: column;
+        }
+        .header {
+            display: flex;
+            height: 50px;
+            background-color: #666;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .content {
+            /* 内容填充满 */
+            flex: 1;   
+            width: 100%; 
+            height: 100%;  
+            display: flex;     
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;  
+        }
+        .silder {
+            display: flex;   
+            width: 170px; 
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            background-color: blue;
+            color: white;
+            font-size: 50px;
+           
+        }
+        .rightcontent { 
+            background-color: green;
+            width: 100%;
+            display: flex;    
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 50px;
+        }
+        .bottom {
+            height: 50px;
+            background-color: orange;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .tabbaritme {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .home {
+            color: red;
+        }
+    </style>
 </head>
 <body>
- <button onclick="lanchApp()">跳转</button>
+    <div class="header"><p>header</p></div>
+    <div class="content">
+        <div class="silder"><p>sidder</p></div>
+        <div class="rightcontent"><p>content</p></div>
+    </div>
+    <div class="bottom" id="tabbar">
+        <div class="tabbaritme home" data-value="1">
+            <p class="hometitle">首页</p>
+            <i class="iconfont icon-shouye"></i>
+            <!-- <img src="" alt="" class="homeImg"> -->
+        </div>
+        <div class="tabbaritme hq" data-value="2">
+            <p class="hqtitle">行情</p>
+            <i class="iconfont icon-hangqing"></i>
+        </div> 
+        <div class="tabbaritme zx">
+            <p class="hometitle">资讯</p>
+            <i class="iconfont icon-shouye"></i>
+            <!-- <img src="" alt="" class="homeImg"> -->
+        </div>
+        <div class="tabbaritme jy">
+            <p class="hqtitle">交易</p>
+            <i class="iconfont icon-hangqing"></i>
+        </div> 
+        <div class="tabbaritme wd">
+            <p class="hqtitle">我的</p>
+            <i class="iconfont icon-hangqing"></i>
+        </div> 
+    </div>
+
+    <script>
+        var bottom = document.getElementById('tabbar');
+        bottom.addEventListener('click',function(e){
+            alert("a");
+            console.log(e);
+        });
+    </script>
 </body>
-<meta name="apple-itunes-app" content="app-id=425692044"/>
-<script type="text/javascript">
-	function lanchApp() {
-		// body...
-		// alert("即将跳转");
-		//scheme://host:端口/path
-		//<a href="caishilive://caishi:8080/loadtooldetail?tool_id=100">打开APP工具详情页</a>
-		window.location.href="https://e.bocichina.com";
-	}
-</script>
 </html>
